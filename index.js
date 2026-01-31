@@ -6,15 +6,14 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let generateBtn = document.getElementById('generate-btn')
 let passwordOne = document.getElementById('password-one')
 let passwordTwo = document.getElementById('password-two')
+let passwordLength = 15
 
 
 function getRandomNumber() {
-    let randomNum = Math.floor(Math.random() * characters.length)
-    return randomNum
+    const randomNumber = Math.floor(Math.random() * characters.length)
+    return randomNumber
 }
-console.log(getRandomNumber())
 generateBtn.addEventListener('click', function() {
-    let passwordLength = 15
     let randomPassword1 = ""
     let randomPassword2 = ""
     for (let i = 0; i < passwordLength; i++){
@@ -24,8 +23,3 @@ generateBtn.addEventListener('click', function() {
     passwordOne.textContent = randomPassword1
     passwordTwo.textContent = randomPassword2
 })
-
-
-
-
-
